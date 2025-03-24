@@ -1,0 +1,11 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        enabled: false
+    discovery:
+      client:
+        simple:
+          instances:
+            provider-service:
+              - uri: http://localhost:8082

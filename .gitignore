@@ -1,0 +1,4 @@
+/.idea/
+/common-api/target/
+/consumer-service/target/
+/provider-service/target/

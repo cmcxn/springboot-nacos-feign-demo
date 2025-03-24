@@ -1,0 +1,31 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: consumer-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+        namespace: public
+        username: nacos  # 如果有密码认证，请配置
+        password: nacos  # 如果有密码认证，请配置
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
